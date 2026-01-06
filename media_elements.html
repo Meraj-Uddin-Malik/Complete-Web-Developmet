@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Media Elements</title>
-</head>
-<body>
-    <audio src="/Media/Music.mp3" controls autoplay muted></audio>
-    <video src="/Media/demoVedio.mp4" controls autoplay muted width="600"></video>
-</body>
+  </head>
+  <body>
+    <audio
+      src="/Media/Music.mp3"
+      controls
+      autoplay
+      muted
+      preload="auto"
+    ></audio>
+    <video
+      src="/Media/demoVedio.mp4"
+      controls
+      muted
+      width="600"
+      loop
+      poster="Media/download.jpg"
+    ></video>
+
+    <svg width="100" height="100">
+      <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+    </svg>
+  </body>
 </html>
