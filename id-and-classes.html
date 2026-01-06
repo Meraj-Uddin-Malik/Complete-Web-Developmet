@@ -1,12 +1,55 @@
+<!--
+DOCUMENTATION: ID vs CLASS Selectors
+
+IDs (#):
+- Unique identifier for a single element on the page
+- Each ID should appear only once in an HTML document
+- Higher specificity than classes (ID selectors override class selectors)
+- Used when you need to target one specific element
+- Example: #firstdiv, #seconddiv
+
+CLASSES (.):
+- Reusable selectors that can be applied to multiple elements
+- Multiple elements can share the same class
+- Lower specificity than IDs
+- Used for styling groups of similar elements or repeated patterns
+- Example: .red, .blue
+
+SPECIFICITY ORDER (Highest to Lowest):
+1. Inline styles (style="")
+2. ID selectors (#)
+3. Class selectors (.)
+4. Element selectors (div, p, etc.)
+
+NOTE: In this code, the ID selector (#firstdiv with color: red) will override 
+the class selector (.red with color: blue) due to higher specificity.
+The #seconddiv will display red text, not blue, despite the .blue class.
+-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Id and Classes</title>
-</head>
-<body>
-    
-    
-</body>
+
+    <style>
+      .red {
+        color: blue;
+      }
+      #first {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+
+      #seconddiv {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="red" id="firstdiv">first</div>
+    <div id="seconddiv" class="blue">second</div>
+  </body>
 </html>
